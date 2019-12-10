@@ -118,8 +118,17 @@ file.close()
 print('Finished')
 print(text)
 
+'''Time module'''
+import time
+print(time.time()) #Current time i.e time from begging of time 01/01/1970
+print(time.asctime()) #current system time
+print(time.gmtime()) #greenwhich time
+time.sleep(n) #n is number of seconds to pause execution
 
-
+'''os module'''
+import os
+os.getcwd()#get working directory
+#we can use this module to create, rename directories...
 
 
 
