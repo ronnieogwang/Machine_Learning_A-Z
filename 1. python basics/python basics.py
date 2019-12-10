@@ -53,6 +53,11 @@ for i in t:
 '''Data structures'''
     '''1. Lists'''
 x = [1,3,9,4,5,6] #sams data type
+
+#multidimensional lists/ lists with in lists
+x = [[1,2,3],[4,5,6],[7,8,9]]
+y =x[0][2]
+
 #indexing
 print(x[0]) #first element is 1
 print(x[1:4]) #print elements from index 1 to 3, 4 exclusive
@@ -97,6 +102,7 @@ person = {'name':'Max','Age': 18} #definition
 person['name'] #indexing
 person['height'] = 162 #adding a new key value pair
 print(person)
+
 
 
 '''Writing to files in python'''
