@@ -66,6 +66,11 @@ print(q.ravel())
 #Note: ravel and flatten do the same thing-flattening. But a change made to the ravelled array
 #affects the original array, while flatten just returns another copy.
 
+#stacking arrays
+#1st axis, run vertically along the rows
+#second axis ru horizontally along columns
+x = np.arange(4).reshape(2,2)
+y = np.arange(4,8).reshape(2,2)
 
 
 
