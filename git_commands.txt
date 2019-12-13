@@ -1,0 +1,19 @@
+1. git --version: 	// gives the git version
+2. git init:		// initialize a local repo
+3. git add <file>	// track a file
+4. git add -A		// adds all files in the local repo
+5. git add *.html	// adds all html files
+6. git add .		// adds all files
+4. git status		// check status
+5. git commit		// save changes
+6. 	
+7. git pull		// pul from a remote repo
+8. git clone		// clone a remote repo
+9. ls			// lists dir/files in the folder
+10. git rm --cached <file>// removes file from staging area but remains in folder
+11. git rm -f <file>		//Deletes file completely
+12. git remote add origin <url> // add url of github repo
+13. git remote -v		//verify the remote url
+14. git push origin master // push to remote repo
+15. git log			// to view previous commits
+
