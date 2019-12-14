@@ -18,4 +18,9 @@
 15. git log			// to view previous commits
 16. git checkout -- <file>	//to discard changes made
 17. git remote set-url origin <url> //change remote url
+18. git reset HEAD <file>	// to unstage file
+19. Vim mode, the window that pops us for you to write a commit message
+20. i - takes you to the insert mode
+21. esc - takes you back to normal mode
+22. :x - saves your commit
 
