@@ -74,4 +74,34 @@ plt.xlabel('plot points')
 plt.ylabel('profits')
 plt.show()
 
+#Building an optimal model with Backward elimination
+import statsmodels.api as sm
+#we have to add a column of 1's to the matrix of features to cater for the b0 constant,
+#the linear regression model does this on its own, but ths model doesn't
+X = np.append(arr = np.ones((50, 1)).astype(int), values = X, axis = 1)
+
+#split data
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+
+X_opt = X_train[:, [0, 1, 2, 3, 4, 5]]#optimal features, at the start, include all 0 to 5
+
+'''OLS ordinary least squares.'''
+regressor_OLS = sm.OLS(endog = y_train, exog = X_opt).fit()
+regressor_OLS.summary() #to view p-value
+
+#from summary, index2 has highest p value 0.814, so we remove it
+X_opt = X_train[:, [0, 1, 3, 4, 5]]#optimal features, at the start, include all 0 to 5
+regressor_OLS = sm.OLS(endog = y_train, exog = X_opt).fit()
+regressor_OLS.summary()
+
+#from summary, index1 has highest p value 0.729, so we remove it
+X_opt = X_train[:, [0, 3, 4, 5]]#optimal features, at the start, include all 0 to 5
+regressor_OLS = sm.OLS(endog = y_train, exog = X_opt).fit()
+regressor_OLS.summary()
+
+#from summary, index2 has highest p value 0.65, so we remove it
+X_opt = X_train[:, [0, 3, 5]]#optimal features, at the start, include all 0 to 5
+regressor_OLS = sm.OLS(endog = y_train, exog = X_opt).fit()
+regressor_OLS.summary()
 
