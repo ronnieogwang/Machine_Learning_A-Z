@@ -16,4 +16,6 @@
 13. git remote -v		//verify the remote url
 14. git push origin master // push to remote repo
 15. git log			// to view previous commits
+16. git checkout -- <file>	//to discard changes made
+17. git remote set-url origin <url> //change remote url
 
