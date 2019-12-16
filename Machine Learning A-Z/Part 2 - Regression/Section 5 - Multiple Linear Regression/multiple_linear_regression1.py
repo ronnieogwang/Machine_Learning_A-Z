@@ -32,7 +32,7 @@ others are known'''
     *keep two variables, build a model with by adding remaining ones, @at a time. 
     If lowest P>SL, finish and select previous model. else continue.
     
-    ''')
+    '''
 
 #Importing the libraries
 import numpy as np
@@ -105,3 +105,26 @@ X_opt = X_train[:, [0, 3, 5]]#optimal features, at the start, include all 0 to 5
 regressor_OLS = sm.OLS(endog = y_train, exog = X_opt).fit()
 regressor_OLS.summary()
 
+#from summary, index2 has highest p value 0.07, so we remove it
+X_opt = X_train[:, [0, 3]]#optimal features, at the start, include all 0 to 5
+regressor_OLS = sm.OLS(endog = y_train, exog = X_opt).fit()
+regressor_OLS.summary()
+
+
+'''In reference to the summary() table.
+R^2 and Adjusted R^2,
+to determine the best model in backward elimination, we use the set of variables which gives us the 
+largest value of adjusted R^2.
+In this exampe the best model would be the second last, it has adjusted R^2 = 0.947
+while the last has 0.944, the second last is the best moedel.'''
+
+
+'''Interpreting coefficeints
+In the coefficient column,
+1.If the sign is +ve, then its a positve correlation of the coefficient else -ve
+2. Magnitude, is supposed to be analysed in terms of units. if the units are the same
+the one with a bigger has a bigger effect.
+example:
+R&D : 0.7996. Means, for every unit spent on R&D, the profit increases by 79 cents
+
+For more details, checkout the last section in the regression videos.
