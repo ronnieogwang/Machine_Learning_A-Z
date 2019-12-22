@@ -1,0 +1,23 @@
+<h1>CAP - Cummulative accuracy Pofile</h1>
+<p>It is a curve used to evaluate the perfomance of different models</p>
+<p>It is illustrated int the image in this very folder.</p>
+
+Cap analysis;
+<p>The closer your model to the gray lin(perfect line), the better your model and 
+the closer to blue line (random line), the worse your model.</p>
+
+<h2>Accuracy Ration</h2>
+Accuracy ratio = area under model curve/area under perfect curve
+0<ar<1
+The closer to 1, the better the model
+
+<h3>Evaluating accuracy curve, intuitively</h3>
+<p>at 50% of your independent variable, obtain the dependent variable X </p>
+	<table>
+	<th>Rule of Thumb</th>
+	<tr>X < 60% ; 		Rubbish</tr>
+	<tr>60% < X < 70%	Poor</tr>
+	<tr>70% < X < 80%	Good</tr>
+	<tr>80% < X < 90%	Very Good</tr>
+	<tr>90% < X < 100%	Too Good</tr>
+	</table>
